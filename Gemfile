@@ -33,6 +33,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem "wysiwyg-rails"
 gem 'public_activity', '~> 1.5'
 gem "figaro"
+gem 'font-awesome-sass', '~> 5.15.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
