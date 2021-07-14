@@ -1,3 +1,8 @@
 class Team < ApplicationRecord
-  belongs_to :user
+  has_many :projects, dependent: :destroy
+  has_many :users
+  validates :name, presence: true
+  accepts_nested_attributes_for :users, allow_destroy: true
+  include PublicActivity::Model
+  tracked owner: Proc.new { |controller, model| controller.current_user }
 end
