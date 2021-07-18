@@ -26,7 +26,7 @@ class TeamsController < ApplicationController
   # POST /teams
   # POST /teams.json
   def create
-    @team = current_user.teams.build(team_params)
+    @team = current_user.teams.create(team_params)
     @team.users << current_user
 
     respond_to do |format|
