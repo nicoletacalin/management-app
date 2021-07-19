@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -42,6 +43,8 @@
             <div class="navbar-dropdown">
               <%= link_to 'Project', new_project_path, class:"navbar-item" %>
               <%= link_to 'Team', new_team_path, class:"navbar-item" %>
+              <%= link_to 'Monthly Calendar', monthly_path, class:"navbar-item" %>
+              <%= link_to 'Weekly Calendar', weekly_path, class:"navbar-item" %>
             </div>
           </div>
           <div class="navbar-item has-dropdown is-hoverable">

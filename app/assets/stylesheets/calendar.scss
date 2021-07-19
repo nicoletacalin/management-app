@@ -1,0 +1,41 @@
+// Place all the styles related to the calendar controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.simple-calendar {
+  table {
+    min-height: 80vh;
+  }
+  .today {
+    background-color: #FAF3DD;
+  }
+  .past {
+    color: #6c757d;
+  }
+}
+
+.meeting {
+  color: red;
+  padding: 6px 12px;
+  margin: 4px 0;
+  border-radius: 4px;
+  background-color: #1EDD88;
+  transition: background 0.3s ease;
+  p {
+    margin: 0;
+  }
+}
+
+.meeting:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+.multi-days {
+  background-color: #1BC579;
+}
+
+.calendar-container {
+  margin: 0 8%;
+}

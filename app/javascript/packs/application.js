@@ -11,3 +11,13 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+// External imports
+import "bootstrap";
+
+// Internal imports, e.g:
+import { initFlatpickr, initRangePickr } from "../plugins/flatpickr";
+
+document.addEventListener('turbolinks:load', () => {
+  initRangePickr();
+});

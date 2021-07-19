@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :projects
   resources :teams
+  get 'calendar', to: 'pages#calendar'
+  resources :meetings
+  get :monthly, to: 'calendars#monthly'
+  get :weekly, to: 'calendars#weekly'
 
   as :user do
     put '/user/confirmation' => 'confirmations#update', :via => :patch, :as => :update_user_confirmation

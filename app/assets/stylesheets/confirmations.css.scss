@@ -32,7 +32,7 @@
 @import 'plugins/table.min.css';
 @import 'plugins/video.min.css';
 @import "bulma";
-
+@import "simple_calendar";
 /* Functional Styles: http://tachyons.io/docs/ */
 
 /* Padding http://tachyons.io/docs/layout/spacing/ */
@@ -189,5 +189,5 @@
   margin-bottom: 0;
 }
 
-@import "teams";
-@import "projects";
+
+
