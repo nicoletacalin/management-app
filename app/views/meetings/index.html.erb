@@ -1,13 +1,15 @@
-<h1>Meetings</h1>
+<div class="container m-auto my-4">
+  <h1>Meetings</h1>
+  <% if current_user.meetings.any? %>
+    <% @meetings.each do |meeting| %>
+      <p><%= meeting.name %></p>
+      <p><%= meeting.start_time %></p>
+      <p><%= link_to 'Show', meeting %></p>
+      <p><%= link_to 'Edit', edit_meeting_path(meeting) %></p>
+      <p><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+  <% end %>
+  <br>
 
-<% @meetings.each do |meeting| %>
-  <p><%= meeting.name %></p>
-  <p><%= meeting.start_time %></p>
-  <p><%= link_to 'Show', meeting %></p>
-  <p><%= link_to 'Edit', edit_meeting_path(meeting) %></p>
-  <p><%= link_to 'Destroy', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-<% end %>
-
-<br>
-
-<%= link_to 'New Meeting', new_meeting_path %>
+  <%= link_to 'New Meeting', new_meeting_path %>
+</div>

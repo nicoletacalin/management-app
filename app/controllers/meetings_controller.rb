@@ -1,9 +1,11 @@
 class MeetingsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_meeting, only: %i[show destroy]
 
 
   def index
-    @meetings = Meeting.all
+    @meetings = current_user.meetings.all
+
   end
 
   def new
@@ -12,6 +14,7 @@ class MeetingsController < ApplicationController
 
   def create
     @meeting = Meeting.new(meeting_params)
+    @meeting.user_id = current_user.id
 
     if @meeting.save
       flash[:notice] = "Meeting was successfully created."
