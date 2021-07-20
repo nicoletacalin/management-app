@@ -1,5 +1,6 @@
 <div class="calendar-container">
-  <%= month_calendar(events: @meetings, end_attribute: :end_time) do |date, meetings| %>
+
+  <%= month_calendar(events: current_user.meetings.all, end_attribute: :end_time) do |date, meetings| %>
     <%= date %>
     <% meetings.each do |meeting| %>
       <div class="meeting <%= 'multi-days' if meeting.multi_days? %>">

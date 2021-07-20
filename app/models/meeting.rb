@@ -1,4 +1,5 @@
 class Meeting < ApplicationRecord
+  belongs_to :user
   validates :name, :start_time, :end_time, presence: true
 
    default_scope -> { order(:start_time) }
